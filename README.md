@@ -8,15 +8,15 @@ ST maps are a common way to represent displacement in 2D images. They work by ma
 
 The following ST map would not make any changes to the input position. It gets redder from left to right as the X values of the pixels increase, and greener from bottom to top as the Y values increase.
 
-IMAGE REQUIRED
+![ST map that applies no transformation](assets/STMAP_BLANK.jpg)
 
 The following ST map would set every pixel in the output image to be the pixel at `(1, 0)` (the bottom right) of the source image.
 
-IMAGE REQUIRED
+![alt text](assets/RED.jpg)
 
-The value of every pixel in the ST map is `rgb(1, 0, 0)`, which means that every single pixel in the output image will be take from `(1, 0)` in the source image
+The value of every pixel in the ST map is `rgb(1, 0, 0)`, which means that every single pixel in the output image will be take from `(1, 0)` in the source image.
 
-While ST maps are very useful for representing displacements, they're not very human-readable. Directional displacement maps are meant to act as a more intuitive way to represent displacement in images by defining the displacement in terms of angle and intensity.
+While ST maps are useful for representing displacements, they're not very human-readable. Directional displacement maps are meant to act as a more intuitive way to represent displacement in images for situations where you want to create a displacement map by hand.
 
 ## How Directional Displacement Maps Work
 
