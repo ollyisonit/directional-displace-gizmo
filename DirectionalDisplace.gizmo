@@ -1,0 +1,158 @@
+#! C:/Program Files/Nuke15.0v4/nuke-15.0.4.dll -nx
+version 15.0 v4
+Gizmo {
+ inputs 2
+ label "DIRECTIONAL_DISPLACE\n"
+ addUserKnob {20 DirectionalDisplace l "Directional Displace"}
+ addUserKnob {7 position}
+ addUserKnob {7 scale R 0 2}
+ scale 1
+}
+ Constant {
+  inputs 0
+  channels rgb
+  color 1
+  name Constant2
+  xpos -1132
+  ypos -49
+ }
+ Reformat {
+  type "to box"
+  box_width {{src.width}}
+  box_height {{src.height}}
+  box_fixed true
+  resize distort
+  name Reformat4
+  xpos -1015
+  ypos -25
+ }
+set N450d9000 [stack 0]
+ Expression {
+  channel0 {forward.u -forward.v none -backward.v}
+  expr0 (x+0.5)/width
+  channel1 {-forward.u forward.v none -backward.v}
+  expr1 (y+0.5)/height
+  channel2 none
+  expr2 0
+  expr3 1
+  name Expression1
+  label "GENERATE_ST\n"
+  xpos -1015
+  ypos 112
+ }
+set N450d9800 [stack 0]
+ Input {
+  inputs 0
+  name map
+  label "\[value number]"
+  xpos -886
+  ypos -314
+  number 1
+  addUserKnob {20 User}
+ }
+ Reformat {
+  type "to box"
+  box_width {{src.width}}
+  box_height {{src.height}}
+  box_fixed true
+  resize none
+  name Reformat1
+  xpos -886
+  ypos -169
+ }
+push $N450d9000
+ Merge2 {
+  inputs 2
+  name Merge40
+  xpos -886
+  ypos -25
+ }
+ Colorspace {
+  colorspace_out HSV
+  name Colorspace1
+  label TO_HSV
+  xpos -886
+  ypos 29
+ }
+ Merge2 {
+  inputs 2
+  Achannels motion
+  Bchannels none
+  output motion
+  name Merge6
+  xpos -886
+  ypos 112
+ }
+set N450ff000 [stack 0]
+ Expression {
+  temp_name0 angle_hue
+  temp_expr0 (r*pi()*2)
+  temp_name1 angle_direction
+  temp_expr1 ((2*b+maskdirection)*pi()*2)
+  temp_name2 scale
+  temp_expr2 amount*g*0.1*0.2
+  temp_name3 magnitude
+  temp_expr3 0.5*cos(angle_direction)+0.5
+  channel0 {forward.u -forward.v none -backward.v}
+  expr0 u-(cos(angle_hue))*magnitude*scale
+  channel1 {-forward.u forward.v none -backward.v}
+  expr1 v-(sin(angle_hue))*magnitude*scale
+  channel2 none
+  name Expression3
+  label WARP_ST
+  xpos -886
+  ypos 214
+  addUserKnob {20 User}
+  addUserKnob {7 maskdirection l Angle}
+  maskdirection {{((parent.position)/2)+0.5 x28 0 x59 0.555 x787 1}}
+  addUserKnob {7 amount l Amount}
+  amount {{parent.scale}}
+ }
+set N450ff400 [stack 0]
+ Input {
+  inputs 0
+  name src
+  label "\[value number]"
+  xpos -637
+  ypos -313
+ }
+ Reformat {
+  type "to box"
+  box_width {{src.width}}
+  box_height {{src.height}}
+  box_fixed true
+  resize none
+  name Reformat5
+  xpos -637
+  ypos -240
+ }
+ STMap {
+  inputs 2
+  uv motion
+  name STMap1
+  xpos -637
+  ypos 214
+ }
+ Output {
+  name Output1
+  xpos -637
+  ypos 367
+ }
+push $N450ff400
+push $N450ff000
+push $N450d9800
+ Viewer {
+  inputs 3
+  frame_range 0-250
+  input_number 2
+  channels motion
+  colour_sample_bbox {-0.2770833373 -0.1395833343 -0.275000006 -0.137500003}
+  samplepoints {{-0.2770833373 -0.1395833343}
+    }
+  viewerProcess "sRGB (ACES)"
+  name Viewer1
+  selected true
+  xpos -364
+  ypos -57
+ }
+end_group
