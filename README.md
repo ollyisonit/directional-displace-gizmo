@@ -22,6 +22,10 @@ While ST maps are useful for representing displacements, they're not very human-
 
 In a normal map, the RGB channels of an image are used to encode the XYZ components of a vector. In a directional displacement map, the HSV channels of an image are used to encode the angle, magnitude, and phase shift of a pixel displacement.
 
+For the following examples, this is the source image. The yellow gridlines are meant to be a visual guides and will not be displaced with the rest of the source. 
+
+IMAGE REQUIRED
+
 The hue of the directional displacement map defines the angle of displacement as seen below. Since hue is already represented as an angle in most color pickers, setting the direction of displacement usually means swiveling the color picker to point in the direction that you want your image to move.
 
 IMAGE REQUIRED
@@ -33,6 +37,10 @@ IMAGE REQUIRED
 The value (darkness) of the directional displacement map defines the phase shift of the displacement. By default, setting the `position` knob of the node to 0 will create no displacement and setting the knob to 1 will create maximum displacement. Changing the map's value allows you to change this behavior--for example, a map with value 0.5 will have maximum displacement at `position` 0 and no displacement at `position` 1.
 
 IMAGE REQUIRED
+
+Here's an example of the directional displacement node in action in my short film [Whittled Down](https://whittleddownfilm.ollyglenn.com). The directional displacement gizmo was used to move the highlights and shadows on the 2D-animated character back and forth.
+
+IMAGE NEEDED
 
 ### Controls
 **Inputs**: 
