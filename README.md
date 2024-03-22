@@ -50,3 +50,6 @@ Here's an example of the directional displacement node in action in my short fil
 - `scale`: The intensity of the displacement effect.
 
 # Installation
+Download latest version [here](https://github.com/dninosores/directional-displace-gizmo/releases/latest).
+
+Place `DirectionalDisplace.gizmo` in your `.nuke` folder to install. Access by pressing `X` to open the command editor and typing `DirectionalDisplace` to insert the node into your script.
