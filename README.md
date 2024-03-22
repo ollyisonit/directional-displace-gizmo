@@ -36,11 +36,11 @@ The value (darkness) of the directional displacement map defines the phase shift
 
 ![Gif of value of directional displacement map changing and the output image updating to follow](assets/value_demo.gif)
 
-Here's an example of the directional displacement node in action in my short film [Whittled Down](https://whittleddownfilm.ollyglenn.com). The directional displacement gizmo was used to move the highlights and shadows on the 2D-animated character back and forth.
+Here's an example of the directional displacement node in action in my short film [Whittled Down](https://whittleddownfilm.ollyglenn.com). The directional displacement gizmo was used to move the highlights and shadows on the 2D-animated character back and forth. The effect is subtle, but it's easiest to see in the shadow on his belly and the highlight on his right harm.
 
-IMAGE NEEDED
+![Shot of 2D animated character in 3D environment with flickering highlights and shadows. View is split in half horizontally with the directional displacement map on top and the final output on the bottom.](assets/whittled_down_demo.gif)
 
-### Controls
+# Controls
 **Inputs**: 
 - `src`: The image to be displaced
 - `map`: The directional displacement map
@@ -48,3 +48,5 @@ IMAGE NEEDED
 **Knobs**
 - `position`: The amount of displacement effect to apply. 0 corresponds to no displacement, 1 corresponds to maximum displacement
 - `scale`: The intensity of the displacement effect.
+
+# Installation
