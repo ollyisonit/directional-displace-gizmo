@@ -52,4 +52,4 @@ Here's an example of the directional displacement gizmo in action in my short fi
 # Installation
 Download latest version [here](https://github.com/dninosores/directional-displace-gizmo/releases/latest).
 
-Place `DirectionalDisplace.gizmo` in your `.nuke` folder to install. Access by pressing `X` to open the command editor and typing `DirectionalDisplace` to insert the node into your script. More info on accessing gizmos [here](https://learn.foundry.com/nuke/content/comp_environment/configuring_nuke/sourcing_gizmos.html)
+Place `DirectionalDisplace.gizmo` in your `.nuke` folder to install. Access by pressing `X` to open the command editor and typing `DirectionalDisplace` to insert the node into your script. More info on accessing gizmos [here](https://learn.foundry.com/nuke/content/comp_environment/configuring_nuke/sourcing_gizmos.html).
