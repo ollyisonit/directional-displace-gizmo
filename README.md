@@ -38,7 +38,10 @@ The value (darkness) of the directional displacement map defines the phase shift
 
 Here's an example of the directional displacement gizmo in action in my short film [Whittled Down](https://whittleddownfilm.ollyglenn.com). The directional displacement map (top) was applied to the highlights and shadows on the 2D character in order to make the highlights and shadows flicker back and forth in the firelight. The effect is subtle, but it's easiest to see in the shadow on his belly and the highlight on his right arm.
 
-![Shot of 2D animated character in 3D environment with flickering highlights and shadows. View is split in half horizontally with the directional displacement map on top and the final output on the bottom.](assets/whittled_down_demo.gif)
+
+
+https://github.com/ollyisonit/directional-displace-gizmo/assets/56850051/e5dd44a4-4b22-420a-9748-db58198074fa
+
 
 # Controls
 **Inputs**: 
