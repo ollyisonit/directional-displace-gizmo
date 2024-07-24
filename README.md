@@ -1,5 +1,7 @@
 # Directional Displace Gizmo
 
+![](icon.gif)
+
 Directional Displace is a Nuke gizmo that allows you to specify the displacement of pixels in an image using an HSV matte. It functions similarly to a normal map but in two dimensions.
 
 ## The Problem
